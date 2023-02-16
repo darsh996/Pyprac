@@ -47,13 +47,73 @@
 
 # Tip calculator
     
-print("Welcome to tip calculator")
-total_bill = float(input("Your total bill:"))
-tip_per = int(input("What percentage tip would ypu like to give 10,12,or 15:"))
-split = int(input("How many people to split the bill:"))
+# print("Welcome to tip calculator")
+# total_bill = float(input("Your total bill:"))
+# tip_per = int(input("What percentage tip would ypu like to give 10,12,or 15:"))
+# split = int(input("How many people to split the bill:"))
 
-tip = (tip_per/100) * total_bill
-total = (total_bill+tip)/split
-r_total = round(total, 2)
-print("Each person will pay: $",r_total)
+# tip = (tip_per/100) * total_bill
+# total = (total_bill+tip)/split
+# r_total = round(total, 2)
+# r_total = "{:.2f}".format(total)
+# print("Each person will pay: $",r_total)
+
+# --------------------------------------------
+
+print("Welcome to Pizza Corner!!!!")
+print("Small Pizza  :$15")
+print("Medium Pizza :$20")
+print("Large Pizza  :$25")
+
+size = input("Press S,M,L :")
+quan = input("Please select quantity:")
+
+if size == "S":
+    ex_pep = input("Would you like Pepperoni extra $2 per pizza(Y/N):")
+    if ex_pep == "Y":
+        total = 17
+    else:
+        total = 15
+if size == "M":
+    ex_pep = input("Would you like pepperoni extra $3 per pizza(Y/N):")
+    if ex_pep == "Y":
+        total = 23
+    else:
+        total = 20
+if size == "L":
+    ex_pep = input("Would you like pepperoni extra $3 per pizza(Y/N):")
+    if ex_pep == "Y":
+        total = 28
+    else:
+        total = 25
+
+ex_ch = input("Would you like extra cheese for $3 per pizza(Y/N):")
+if ex_ch == "Y":
+    total += 3
+    
+gr_total = total*quan
+
+print("*****Your Order Summary*****")
+print("size           :",size)
+print("Quantity       :",quan)
+print("Extra Pepporini:",ex_pep)
+print("Extra Cheese   :",ex_ch)  
+print("Total          :",gr_total)
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
